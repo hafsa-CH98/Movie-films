@@ -8,15 +8,15 @@ import image3 from "./assets/amulance.jpeg";
 import image4 from "./assets/tiger.jpeg";
 
 const Moviecard = ({ titre, description, note, lien, image }) => (
-  <div className="bg-[#9ca3af] w-[450px] shadow-2xl rounded-xl p-[10px] m-[20px]	 ">
+  <div className="bg-stone-700 h-[530px] w-[300px] shadow-2xl rounded-xl p-[10px] m-[20px]	 ">
     <img
       src={image}
       alt="photo film"
-      className="mx-auto h-[200px] float-right"
+      className="mx-auto h-[250px] w-[250px] float-top max-w-xs transition duration-300 ease-in-out hover:scale-110 rounded-xl"
     />
 
     <span className="text-2xl	font-bold m-[20px] p-[50px] ">{titre} </span>
-    <p className="text-2xl p-[20px]	 m-[10px] ">{description} </p>
+    <p className="text-2xl p-[20px]	">{description} </p>
     <p className="text-xl font-semibold">Note: {note}</p>
     <a href="https://www.netflix.com/ma-fr/" className="text-red-700 ">
       {lien}
@@ -27,7 +27,7 @@ const Moviecard = ({ titre, description, note, lien, image }) => (
 const Movielist = () => {
   const [data] = useState([
     {
-      titre: "Spedrman",
+      titre: "Spiderman",
       description:
         "The movie won Oscars for best costumes and best screenplay in this year's awards.",
       lien: "Click to watch",
@@ -88,7 +88,7 @@ const Movielist = () => {
   return (
     <div>
       <Filter onSearch={handleSearch} />
-      <section className="grid grid-cols-3 gap-[20]">
+      <section className="bg-stone-800 grid grid-cols-4 gap-[10px] ">
         {filteredMovies.map((item) => (
           <Moviecard
             key={item.titre} 

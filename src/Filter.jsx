@@ -13,8 +13,8 @@ const Filter = ({ onSearch }) => {
   };
 
   return (
-    <div className="bg-zinc-700 ml-[300px] mt-[10px] flex p-[10px] rounded-md justify-center w-[1000px]">
-      <form className="flex gap-4" onSubmit={handleSearch}>
+    <div className="bg-stone-800  flex p-[10px] justify-center  ">
+      <form className="flex  gap-4" onSubmit={handleSearch}>
         <input
           type="text"
           size="90"
